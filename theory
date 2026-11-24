@@ -1,1 +1,7 @@
-1.
+Breakpoint,Πρόθεμα,Διάσταση Οθόνης,Μέγιστο Πλάτος .container,Τυπικές Συσκευές
+Extra small,(κανένα),< 576px,100% (auto),Κινητά κάθετα (Portrait)
+Small,sm,≥ 576px,540px,Κινητά οριζόντια (Landscape)
+Medium,md,≥ 768px,720px,Tablets (iPad)
+Large,lg,≥ 992px,960px,Laptops / Μικρά Desktops
+Extra large,xl,≥ 1200px,1140px,Κανονικά Desktops
+Extra extra large,xxl,≥ 1400px,1320px,Μεγάλες οθόνες / Monitors
