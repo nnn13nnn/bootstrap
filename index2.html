@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+
+</head>
+<body>
+  <!--cntainer αυτόματα κεντραρισμένο πλαίσιο με αυτόματα δεξιά και αριστέρα περιθώρια. margin-left : auto; , margin-right:auto
+  // padding 0 12px προσαρμόζεται αυτόματα 100% σε κινητό , σε tablet κτλ
+  // my-4 m=margin  εξωτερικό περιθώριο y= ο άξονας y(margin-top , margin-bottom), 4 = κλιματα μεγέθους bootstrap 1.5rem = 24px
+   φτάνει μέχρι το 12 η κλίμακα μεγέθους του bootstrap -->
+  <div class ="container my-4">
+    <!--text-center  = text-align = center;
+    //mb-4 margin  b(ottom) 4 (24px) -->
+<h1 class="text-center mb-4"> Grid System </h1>
+<!-- row ενεργοποιήει το flexbox (display:flex; flex-wrap:wrap) (margin-left:-12px; margin-right:-12px)  για να γίνει ευθυγράμμιση των στηλών με τις άκρες του container
+g = Gutter κενό ανάμεσα στις στήλες μεγέθους 3 = 16px-->
+<div class="row g-3 mb-4">
+<!-- col-12 <768px δηλαδή κινητό τότε το συγκεκριμένο div πιάνει 12/12 οπότε όλη την οθόνη
+col-md-6 >=768px δηλαδή tablet τότε το div πιάνει 6/12 δηλαδή την μισή οθόνη  6/12 + 3/12 + 3/12
+col-lg-4 >=992 δηλαδή σε Laptop θα πιάνει το div 4/12 δηλαδή το 1/3     4/12 + 4/12 + 4/12-->
+<div class="col-12  col-md-6 col-lg-4">
+  <!-- p-3  padding 3rem - 16px  bg-primary μπλε χρώμα text-white είναι το color:#fff δηλαδή το λευκί rounded είναι οι στρογγυλεμένες γωνίες-->
+<div class = "p-3 bg-primary text-white text-center rounded">
+Στήλη 1
+</div>
+ </div>
+<!-- 8/12 + 6/12 > 12/12-->
+<div class="col-12 col-md-6 col-lg-4">
+<div class = "p-3  text-white text-center rounded myclass1">
+Στήλη 2
+</div>
+</div>
+
+<div class="col-12 col-md-12 col-lg-4">
+<div class="p-3 bg-dark text-white text-center rounded">
+Στήλη 3
+</div>
+</div>
+</div> <!-- τέλος σειράς -->
+
+
+<div class ="row g-3 mb-4">
+<div class = "col-12 col-lg-8">
+<div class="p-4 bg-dark text-white border rounded">
+Στήλη 1
+</div>
+
+</div>
+
+
+<div class="col-12 col-lg-4">
+<div class = "p-4 bg-warning text-white border rounded">
+Στήλη 2
+</div>
+</div>
+
+
+</div> <!-- τέλος 2ης σειράς -->
+
+<div class ="row g-2 mb-4 text-white">
+<!-- Μας αναγκάζει να μοιράσει ο browser ισόποσα στα 5 τώρα κάθε div  το text-white Κληρονομείται μέσα στην κλάση-->
+<div class = "col">
+  <div class="bg-warning">
+Στήλη 1
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-danger">
+Στήλη 2
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-primary">
+Στήλη 3
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-secondary">
+Στήλη 4
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-info">
+Στήλη 5
+
+  </div>
+</div>
+
+</div> <!-- τέλος 3ης σειράς -->
+
+<div class ="row g-2 mb-4 text-white">
+<!-- Μας αναγκάζει να μοιράσει ο browser ισόποσα στα 5 τώρα κάθε div  το text-white Κληρονομείται μέσα στην κλάση-->
+<div class = "col">
+  <div class="bg-warning">
+Στήλη 1
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-danger">
+Στήλη 2
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-primary">
+Στήλη 3
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-secondary">
+Στήλη 4
+
+  </div>
+</div>
+<div class="col">
+  <div class="bg-info">
+Στήλη 5
+
+  </div>
+</div>
+
+<div class="col">
+  <div class="bg-success">
+Στήλη 6
+
+  </div>
+</div>
+</div> <!-- τέλος 4ης σειράς -->
+
+
+
+
+<div class ="row g-2 mb-4 text-white">
+<!-- Μας αναγκάζει να μοιράσει ο browser ισόποσα στα 5 τώρα κάθε div  το text-white Κληρονομείται μέσα στην κλάση-->
+<div class = "col">
+  <div class="bg-warning">
+Στήλη 1
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-danger">
+Στήλη 2
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-primary">
+Στήλη 3
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-secondary">
+Στήλη 4
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-info">
+Στήλη 5
+
+  </div>
+</div>
+
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-success">
+Στήλη 6
+
+  </div>
+</div>
+</div> <!-- τέλος 5ης σειράς -->
+
+
+<div class ="row g-2 mb-4 text-white">
+<!-- Μας αναγκάζει να μοιράσει ο browser ισόποσα στα 5 τώρα κάθε div  το text-white Κληρονομείται μέσα στην κλάση-->
+<div class = "col">
+  <div class="bg-warning">
+Στήλη 1
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-danger">
+Στήλη 2
+
+  </div>
+</div>
+<div class="col-12 col-md-4 col-lg-2">
+  <div class="bg-primary">
+Στήλη 3
+
+  </div>
+</div>
+<div class="col-12 col-md-6 col-lg-2">
+  <div class="bg-secondary">
+Στήλη 4
+
+  </div>
+</div>
+<div class="col-12 col-md-6 col-lg-2">
+  <div class="bg-info">
+Στήλη 5
+
+  </div>
+</div>
+
+<div class="col-12 col-md-12 col-lg-2">
+  <div class="bg-success">
+Στήλη 6
+
+  </div>
+</div>
+</div> <!-- τέλος 6ης σειράς -->
+
+
+<h2 class = "text-center my-4"> Κουμπιά Bootstrap </h2>
+<div class ="mb-4">
+
+  <!--Η βασική κλάση btn δίνει padding και στρογγυλεμένες γωνίες, δημιουργήσαμε button με περίγραμμα και σε περίπτωση
+ακουμπίσματος με το ποντίκι γεμίζουν χρ΄ω΄μα (btn-outline-χρώμα)  και το btn disabled να κάνει μη ενεργά-->
+<button type="button" class ="btn btn-primary"> Αποθήκευση </button>
+<button type="button" class = "btn btn-success"> Επιβεβαίωση </button>
+<button type="button" class = "btn btn-danger"> Διαγραφή </button>
+
+<button type="button" class ="btn btn-outline-primary"> Μπλέ περίγραμμα </button>
+<button type="button" class = "btn btn-outline-dark"> Μαύρο περίγραμμα </button>
+<button type="button" class = "btn btn-info" disabled > Μην ενεργοποιημένο κουμπί </button>
+
+</div>
+
+<!-- Η κλαση dropdown είναι το εξωτερικό πλαίσιο που κρατάει ενωμένα το κουμπί και τις επιλογές -->
+<div class="dropdown mb-5">
+  <!-- dropdown-toggle προσθέτει αυτόματα τα μικρά βελάκια δίπλα στο κείμενο,
+data-bs-toggle="dropdown" ε΄ίναι της javascript / bootstrap  ΄ώστε να ανοίγει και να κλείνει  η λίστα με το κλικ -->
+<button class = "btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded = "false">
+Επιλογές μενού
+</button>
+
+<!-- dropdown-menu δημιουργία τα σωστά padding κτλ για την εμφάνιση της λίστας. Είναι η κρυφή λίστα που εμφανίζεται μετά το κλικ -->
+<ul class="dropdown-menu">
+  <!-- το  dropdown-item δημιουργία τα σωστά padding κτλ για κάθε επιλογή -->
+<li><a class = "dropdown-item"  href="#">Επιλογή 1 </a> </li>
+<li><a class = "dropdown-item"  href="#">Επιλογή 2 </a> </li>
+<li><a class = "dropdown-item"  href="#">Επιλογή 3 </a> </li>
+<!-- dropdown-divider λεπτή οριζόντια διαχωριστική γραμμή ανάμεσα στις επιλογές -->
+<li><hr class ="dropdown-divider"> </li>
+<li><a class = "dropdown-item text-danger"  href="#">Αποσύνδεση </a> </li>
+
+
+</ul>
+</div> <!-- τέλος dropdown κουμπιού -->
+
+
+
+
+</div> <!-- τέλος container -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
