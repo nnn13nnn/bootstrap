@@ -1,0 +1,14 @@
+:root {
+  --bs-primary : #f6f42c1;
+  --bs-primary-rgb : 111, 66 , 193;
+}
+
+
+.myclass1 {
+  background-color: purple ;
+}
+
+
+.bg-warning {
+  background-color: #ff6600 !important;
+}
