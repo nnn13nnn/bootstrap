@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<!-- Cards -->
+<h2 class="text-center my-4" > Προιόντα </h2>
+
+
+<!-- row δημιουργία FlexBox  g-4  24px οριζόντια και κάθετα mb-5 εξωτερικό περιθώριο κάτω από την ενότητα -->
+<div class="row g-4 mb-5">
+  <div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+  <div class="card h-100 shadow-sm position-relative">
+    <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+    m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+    <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+    <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+    <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+    <div class="card-body d-flex flex-column">
+      <!-- card-title είναι ο τίτλος -->
+      <h5 class="card-title"> Μνήμη RAM </h5>
+      <p class="card-text"> Τρομερή ευκαιρία </p>
+      <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+      <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+    </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+
+
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+
+
+
+</div> <!-- Τέλος του row -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
