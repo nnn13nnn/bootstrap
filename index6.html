@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<!-- Η κλάση για δημιουργία navbar
+navbar-expand-lg  Σε  lg - large οθόνες >992px  βάλε τα λινκ οριζόντια , σε μικρότερες κρύψε τα και
+βγάλε το κουμπι hamburger
+navbar-dark Δεν βάζει μα΄ύρο χρώμα. Επειδ΄΄΄η έχω σκούρο φόντο κάνε τα γράμματα του hamburger άσπρα για να είναι ορατά
+bg-dark κάνει φόντο μαύρο
+sticky-top μόλις σκρολάρεις και το μενο΄θ ακουμπήσει στο ταβάνι τις ο΄θόνης μένει εκεί
+mb-4 margin bottom 4 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-4">
+<div class="container">
+
+<!-- navbar-brand κλάση ευθιγραμίζει κάθετα το Logo
+fw-bold font weight bold  Μαυρα έντονα γράμματα -->
+  <a class="navbar-brand fw-bold" href="#"> Σκρούτζ </a>
+  <!-- navbar-toggler Το κουμπί εμφανίζεται ΜΟΝΟ κάτω από τα 992px λόγω πιο πάνω κλήσης του navbar-expand-lg
+  το button είναι απαραίτητο  για να μην νομίζει ότι είναι submit ο browser
+  data-bs-toggle="collapse" Javascript bootstrap άνοιξε/κλεισε με μικρό animation όταν γ΄ίνει κλικ
+  data-bs-target="#mainNavbar" Ανοίξει από την Navbar το στοιχείο που έχει το #
+  arial-controls / aria - expanded/ aria-label ιδιότητες προσβασιμότητας για άτομα με όραση-->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="#mainNavbar" aria-expanded="false" aria-label="Εναλλαγή πλοήγησης">
+<!--Οι 3 γραμμές του hamburger -->
+<span class="navbar-toggler-icon"> </span>
+</button>
+<!-- collapse κρύβει το περιεχόμενο από προεπιλογή
+navbar-collapse επαναφέρει το περιεχόμενο σε οριζόντια διάταξη σε μεγάλες οθόνες
+id είναι το ίδιο με το data-bs-target -->
+<div class = "collapse navbar-collapse" id="mainNavbar">
+<!-- ul Λίστα χωρίς κουκκίδες
+me-auto margin end : auto παίρνει τον κενό χώρο στα δεξια
+mb-2 mb-lg-0 το κενό είναι 2 ενώ στις μεγάλες οθόνες είναι 0 -->
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <!-- nav item Κάθε μεμονομένο κου΄τακι επιλογ΄ής -->
+<li class="nav-item">
+  <!-- navlink δίνει το σωστό χρώμα ,padding , hover στα links
+  active φωτίζει το λινκ για να ξέρει ο χρήστης που βρίσκεται-->
+<a class="nav-link active" href="#">Αρχική </a>
+</li>
+<li class="nav-item">
+  <!-- navlink δίνει το σωστό χρώμα ,padding , hover στα links
+  active φωτίζει το λινκ για να ξέρει ο χρήστης που βρίσκεται-->
+<a class="nav-link" href="#">Προσφορές </a>
+</li>
+<li class="nav-item">
+  <!-- navlink δίνει το σωστό χρώμα ,padding , hover στα links
+  active φωτίζει το λινκ για να ξέρει ο χρήστης που βρίσκεται-->
+<a class="nav-link" href="#">Προσφορές2 </a>
+</li>
+<li class= "nav-item dropdown">
+  <!-- dropdown toggle δημιουργεί αυτόματα το βελάκι δίπλα από την λέξη Κατηγορίες
+  role = "button" το λινκ συμπεριφέρται σαν κουμπί
+  data-bs-toggle = "dropdown" ανοίγει ένα μενού
+ aria-expanded="false " το μενου αρχικά είναι κλειστό-->
+
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Κατηγορίες
+</a>
+<!-- dropdown-menu το μενου που ανοίγει -->
+<ul class="dropdown-menu">
+  <!-- dropdown-item οι επιλογές του dropdown  - menu -->
+  <li> <a class="dropdown-item" href="#"> Οθόνες </li>
+    <li> <a class="dropdown-item" href="#"> Πληκτρολόγιο </li>
+      <!-- dropdown-divider μια λεπτ΄ή διακεκομένη γραμμή -->
+      <li> <hr class="dropdown-divider"> </li>
+      <li> <a class="dropdown-item" href="#"> Όλα </li>
+
+
+
+</ul>
+</li>
+
+<li class= "nav-item dropdown">
+  <!-- dropdown toggle δημιουργεί αυτόματα το βελάκι δίπλα από την λέξη Κατηγορίες
+  role = "button" το λινκ συμπεριφέρται σαν κουμπί
+  data-bs-toggle = "dropdown" ανοίγει ένα μενού
+ aria-expanded="false " το μενου αρχικά είναι κλειστό-->
+
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Κατηγορίες 2
+</a>
+<!-- dropdown-menu το μενου που ανοίγει -->
+<ul class="dropdown-menu">
+  <!-- dropdown-item οι επιλογές του dropdown  - menu -->
+  <li> <a class="dropdown-item" href="#"> Οθόνες </li>
+    <li> <a class="dropdown-item" href="#"> Πληκτρολόγιο </li>
+      <!-- dropdown-divider μια λεπτ΄ή διακεκομένη γραμμή -->
+      <li> <hr class="dropdown-divider"> </li>
+      <li> <a class="dropdown-item" href="#"> Όλα </li>
+
+
+
+</ul>
+</li>
+
+</ul>
+
+</div>
+</div> <!-- Τέλος container -->
+
+
+
+</nav> <!-- Τέλος της navbar -->
+
+
+
+<!-- Cards -->
+<h2 class="text-center my-4" > Προιόντα </h2>
+
+
+<!-- row δημιουργία FlexBox  g-4  24px οριζόντια και κάθετα mb-5 εξωτερικό περιθώριο κάτω από την ενότητα -->
+<div class="row g-4 mb-5">
+  <div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+  <div class="card h-100 shadow-sm position-relative">
+    <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+    m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+    <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+    <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+    <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+    <div class="card-body d-flex flex-column">
+      <!-- card-title είναι ο τίτλος -->
+      <h5 class="card-title"> Μνήμη RAM </h5>
+      <p class="card-text"> Τρομερή ευκαιρία </p>
+      <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+      <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+    </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+
+
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+
+
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+<div class=" col-12 col-md-6 col-lg-4">
+<!-- card σημαίνει ότι δημιουργεί μια κάρτα με ένα λευκό πλαίσιο και ένα γκρί περίγραμμα
+h-100 height 100% αναγκάζει τις εικόνες να πάρουν το μέγεθος της μεγαλύτερης/ψηλότερη
+shadow-sm τοποθετεί μια διακριτική σκιά
+position-relative ορίζει το όριο για τις εικόνες -->
+<!-- Κάρτα 1 -->
+<div class="card h-100 shadow-sm position-relative">
+  <!-- badge = ετικέτα bg-danger = Κόκκινο top-0 στο πάνω μέρος της κάρτας end-0 δεξιά .
+  m-2 δίνει χώρο για να μην ακουμπάει στο περίγραμμα -->
+  <span class="badge bg-danger position-absolute top-0 end-0 m-2"> -50% Έκπτωση </span>
+  <!-- card-img-top κάνει την εικόνα width 100% και στρογγυλεύει τις πάνω γωνίες -->
+  <img src = "https://picsum.photos/id/340/400/220?random=1" class="card-img-top" alt="Εικόνα1">
+<!-- card-body δημιουργεί  εσωτερικό περιθώριο (padding:16px) γύρω από το κείμενο
+d-flex flex-column μετατρέπει το  εσωτερικό της κάρτας σε κάθετεο flexbox -->
+  <div class="card-body d-flex flex-column">
+    <!-- card-title είναι ο τίτλος -->
+    <h5 class="card-title"> Μνήμη RAM </h5>
+    <p class="card-text"> Τρομερή ευκαιρία </p>
+    <!-- mt - auto margin-top auto απορροφά το κενό ανέμσα στο κέιμενο και στο κουμπί-->
+    <a href="#" class="btn btn-primary mt-auto"> Αγορά τώρα </a>
+
+  </div> <!-- Τέλος div-->
+
+</div> <!-- τέλος της class -->
+
+
+
+</div> <!--  Τέλος του col -->
+
+</div> <!-- Τέλος του row -->
+
+
+
+
+</div> <!--  Τέλος του col -->
+
+
+<!-- bg-dark μαύρο χρώμα ,
+text-light λευκά γράμματα,
+pt-5 padding top,
+pb-3 padding bottom,
+mt-auto -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-auto">
+<div class="container">
+
+  <!-- gy-4 gap-y Κάθετο κενό στις σ΄τήλες-->
+<div class="row gy-4">
+<div class="col-12 col-md-6 col-lg-4">
+  <h5 class="fw-bold text-uppercase mb-3"> Σκρουτζ </h5>
+  <p class="text-secondary"> Αγόρασε ότι θες </p>
+
+
+</div>
+
+
+
+
+</div> <!-- τέλος container -->
+
+
+
+<div class="col-6 col-md-6 col-lg-2">
+<h5 class="fw-bold text-uppercase mb-3">Links </h5>
+<ul class="list-unstyled">
+  <li class="mb-2">
+    <!-- text-decoration-none υπογραμισμένο το λινκ -->
+<a href="#" class="text-secondary text-decoration-none"> Αρχική </a>
+  </li>
+
+  <li class="mb-2">
+    <!-- text-decoration-none υπογραμισμένο το λινκ -->
+<a href="#" class="text-secondary text-decoration-none"> Αρχική </a>
+  </li>
+  <li class="mb-2">
+    <!-- text-decoration-none υπογραμισμένο το λινκ -->
+<a href="#" class="text-secondary text-decoration-none"> Αρχική </a>
+  </li>
+
+</ul>
+</div>
+
+</footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
